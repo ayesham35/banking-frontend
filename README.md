@@ -1,16 +1,43 @@
-# React + Vite
+# JD Bank Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack banking frontend that connects to the JD Bank Spring Boot REST API.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** with Vite
+- **Material UI v9** — component library
+- **TanStack Query v5** — server state management
+- **React Router v7** — client-side routing
+- **Axios** — HTTP client with interceptors
+- **Formik + Yup** — form handling and validation
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- JWT authentication with token persistence
+- Protected routes — unauthenticated users redirected to login
+- View all bank accounts
+- Open new accounts
+- Deposit, withdraw, and transfer funds
+- Transaction history per account
+- Idempotency keys on all money operations to prevent duplicate charges
+- Automatic token expiration handling
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+- Node.js 18+
+- JD Bank Spring Boot API running on `http://localhost:8080`
+
+### Setup
+
+```bash
+npm install
+npm run dev
+```
+
+Open http://localhost:5173
+
+## Backend
+
+This app requires the JD Bank Spring Boot API.  
+Repository: [banking-api](https://github.com/ayesham35/banking-and-transfer-REST-API)
